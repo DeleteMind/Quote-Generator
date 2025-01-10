@@ -12,9 +12,17 @@ function newQuote() {
     // Pick a random quote from apiQuotes array
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
     // Check if Author field is blank an replace with 'Unknown'
-
-
-    authorText.textContent = quote.author || "Unknown";
+    if (!quote.author) {
+        authorText.textContent = "Unknown";
+    } else {
+        authorText.textContent = quote.author;
+    }
+    // Check Quote length to determine styling
+    if (quote.quote.length > 120) {
+        quoteText.classList.add('long-quote');
+    } else {
+        quoteText.classList.remove('long-quote');
+    }
     quoteText.textContent = quote.quote;
 }
 
