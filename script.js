@@ -11,8 +11,11 @@ let apiQuotes = [];
 function newQuote() {
     // Pick a random quote from apiQuotes array
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-    console.log(quote);
-    
+    // Check if Author field is blank an replace with 'Unknown'
+
+
+    authorText.textContent = quote.author || "Unknown";
+    quoteText.textContent = quote.quote;
 }
 
 
@@ -29,3 +32,7 @@ async function getQuote() {
 
 
 getQuote();
+
+
+
+
