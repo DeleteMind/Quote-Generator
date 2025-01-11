@@ -85,7 +85,11 @@ button:active {
 }
 
 .instagram-button:hover {
-    color: ;
+    color: #F56040;
+}
+
+.fa-instagram {
+    font-size: 1.5rem;
 }
 
 /*  Media Query: Tablet or Smaller */

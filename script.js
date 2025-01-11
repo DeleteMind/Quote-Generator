@@ -4,6 +4,7 @@ const quoteText = document.getElementById("quoter");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const  newQuteBtn= document.getElementById("new-quote");
+const instaBtn = document.getElementById('instagram')
 
 let apiQuotes = [];
 
@@ -34,7 +35,7 @@ async function getQuote() {
         apiQuotes = await response.json();
         newQuote();
     } catch (error) { 
-        
+
     }
 }
 
@@ -44,8 +45,14 @@ function tweetQuote() {
     window.open(tweetUrl, '_blank');
 }
 
+// Intsagram post!
+function instaQuote() {
+    const instaUrl = 'https://www.instagram.com/create/story';
+    window.open(instaUrl, '_blank')
+}
 
 //
 twitterBtn.addEventListener('click', tweetQuote);
 newQuteBtn.addEventListener('click', newQuote);
+instaBtn.addEventListener('click', instaQuote)
 getQuote();
