@@ -37,10 +37,14 @@ async function getQuote() {
     }
 }
 
+// Tweet Quote
+function tweetQuote() {
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
+    window.open(tweetUrl, '_blank');
+}
 
 
+// 
+twitterBtn.addEventListener('click', tweetQuote);
+newQuteBtn.addEventListener('click', newQuote);
 getQuote();
-
-
-
-
