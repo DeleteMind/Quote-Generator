@@ -84,11 +84,8 @@ button:active {
     font-size: 1.5rem;
 }
 
-.facebook-button:hover {
-    color: #4267B2;
-}
 
-.fa-facebook {
+.fa-threads {
     font-size: 1.5rem;
 }
 
