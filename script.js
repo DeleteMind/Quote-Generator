@@ -34,6 +34,7 @@ async function getQuote() {
         apiQuotes = await response.json();
         newQuote();
     } catch (error) { 
+        
     }
 }
 
@@ -44,7 +45,7 @@ function tweetQuote() {
 }
 
 
-// 
+//
 twitterBtn.addEventListener('click', tweetQuote);
 newQuteBtn.addEventListener('click', newQuote);
 getQuote();
