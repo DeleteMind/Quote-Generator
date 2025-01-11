@@ -4,7 +4,7 @@ const quoteText = document.getElementById("quoter");
 const authorText = document.getElementById("author");
 const twitterBtn = document.getElementById("twitter");
 const  newQuteBtn= document.getElementById("new-quote");
-const instaBtn = document.getElementById('instagram')
+const instaBtn = document.getElementById('facebook')
 
 let apiQuotes = [];
 
@@ -46,13 +46,13 @@ function tweetQuote() {
 }
 
 // Intsagram post!
-function instaQuote() {
-    const instaUrl = 'https://www.instagram.com/create/story';
-    window.open(instaUrl, '_blank')
+function faceQuote() {
+    const faceUrl = `https://www.threads.net/intent/post?text=${quoteText.textContent} - ${authorText.textContent}`;
+    window.open(faceUrl, '_blank')
 }
 
 //
 twitterBtn.addEventListener('click', tweetQuote);
 newQuteBtn.addEventListener('click', newQuote);
-instaBtn.addEventListener('click', instaQuote)
+instaBtn.addEventListener('click', faceQuote)
 getQuote();

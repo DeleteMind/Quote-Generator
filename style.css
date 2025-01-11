@@ -84,11 +84,11 @@ button:active {
     font-size: 1.5rem;
 }
 
-.instagram-button:hover {
-    color: #F56040;
+.facebook-button:hover {
+    color: #4267B2;
 }
 
-.fa-instagram {
+.fa-facebook {
     font-size: 1.5rem;
 }
 
